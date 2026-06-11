@@ -1,0 +1,6 @@
+{
+  "name": "皆藤優太 ポートフォリオ",
+  "description": "建築×テクノロジー（AI・開発）を専攻する大学院生、皆藤 優太のコンペ提出用ポートフォリオサイト。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
