@@ -71,20 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lucide) lucide.createIcons();
   });
 
-  /* ---------------- Horizontal scroll arrows ---------------- */
-  const scrollers = {
-    skills: document.getElementById('skills-scroller'),
-    projects: document.getElementById('projects-scroller'),
-  };
-  document.querySelectorAll('[data-scroll]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const el = scrollers[btn.dataset.scroll];
-      const dir = parseInt(btn.dataset.dir, 10);
-      const amount = btn.dataset.scroll === 'skills' ? 320 : 300;
-      if (el) el.scrollBy({ left: dir * amount, behavior: 'smooth' });
-    });
-  });
-
   /* ---------------- Project modal ---------------- */
   const PROJECTS = [
     {
@@ -188,62 +174,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape') closeModal();
   });
 
-  /* ---------------- Interests viewer ---------------- */
-  const INTERESTS = {
-    camera: {
-      title: 'Camera / 写真',
-      image: 'public/images/hobby/camera.jpeg',
-      description: '日常のきらめきや街角のスナップ撮影',
-      detail:
-        '旅先や街歩きをしながら、光が美しく差し込む瞬間や、人々のふとした表情をカメラで切り取るのが何よりの楽しみです。愛機を片手に、季節の美しい移ろいや、何気ない日常の中に宿る一瞬のドラマを探求しています。',
-    },
-    aikido: {
-      title: '合気道 / Aikido',
-      image: 'public/images/hobby/aikido.jpeg',
-      description: '心身を柔軟に鍛える円の動きと調和',
-      detail:
-        '長年精進を重ねて合気道二段を取得しました。腕力で力任せに相手と競い合うのではなく、自らの姿勢（中心軸）を安定させ、流れるような円運動で相手の力と同調して柔らかくいなす姿勢を大切にしています。日々の礼儀作法や静かな集中力の向上、精神修行としての魅力を感じています。',
-    },
-    mahjong: {
-      title: '麻雀 / Mahjong',
-      image: 'public/images/hobby/mahjong.jpeg',
-      description: '一瞬の決断力を競う心理と確率のゲーム',
-      detail:
-        '限られた情報（捨牌や配牌の傾向）を元に、確率的な選択肢を組み立てながら、同席するプレイヤーとの駆け引きや心理戦を行うことに惹かれています。常に冷静沈着な状況判断力を養い、攻めと守りの絶妙なタイミングを見極める高い戦略性を楽しんでいます。',
-    },
-    cooking: {
-      title: '料理 ＆ ラーメン巡り / Cooking',
-      image: 'public/images/hobby/food.jpeg',
-      description: '丁寧な仕込みが生み出す極上の一品',
-      detail:
-        '素材の組み合わせや加熱時間を丁寧見極め、自分のこだわりを詰め込んだ料理を一から作るのがお気に入りのリフレッシュ方法です。また、週末には全国のこだわりラーメン店を巡り、熟練の店主が生み出す個性豊かなスープの調和や調理技術に感動をもらっています。',
-    },
-  };
+  /* ---------------- Skills viewer ---------------- */
+  const skillTabs = document.querySelectorAll('.skill-tab');
+  const skillsTools = document.getElementById('skills-tools');
+  const skillToolGroups = document.querySelectorAll('.skill-tools-group');
+  const skillsViewerImage = document.getElementById('skills-viewer-image');
 
-  const viewerInner = document.getElementById('viewer-inner');
-  const viewerTitle = document.getElementById('viewer-title');
-  const viewerImage = document.getElementById('viewer-image');
-  const viewerDescription = document.getElementById('viewer-description');
-  const viewerDetail = document.getElementById('viewer-detail');
+  skillTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      if (tab.classList.contains('active')) return;
 
-  document.querySelectorAll('.interest-btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const data = INTERESTS[btn.dataset.hobby];
-      if (!data) return;
+      skillTabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
 
-      document.querySelectorAll('.interest-btn').forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
+      skillsTools.classList.add('fade');
+      skillsViewerImage.classList.add('fade');
 
-      viewerInner.classList.remove('animate-fadeIn');
-      // restart animation
-      void viewerInner.offsetWidth;
-      viewerInner.classList.add('animate-fadeIn');
+      setTimeout(() => {
+        skillToolGroups.forEach((g) => g.classList.toggle('active', g.dataset.skill === tab.dataset.skill));
+        skillsViewerImage.src = tab.dataset.image;
+        skillsViewerImage.alt = tab.dataset.alt;
+        skillsTools.classList.remove('fade');
+        skillsViewerImage.classList.remove('fade');
+      }, 200);
+    });
+  });
 
-      viewerTitle.textContent = data.title;
-      viewerImage.src = data.image;
-      viewerImage.alt = data.title;
-      viewerDescription.textContent = data.description;
-      viewerDetail.textContent = data.detail;
+  /* ---------------- Interests accordion ---------------- */
+  const hobbyPanels = document.querySelectorAll('.hobby-panel');
+  hobbyPanels.forEach((panel) => {
+    panel.addEventListener('click', () => {
+      hobbyPanels.forEach((p) => p.classList.remove('active'));
+      panel.classList.add('active');
+    });
+    panel.addEventListener('mouseenter', () => {
+      hobbyPanels.forEach((p) => p.classList.remove('active'));
+      panel.classList.add('active');
     });
   });
 

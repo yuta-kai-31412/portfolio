@@ -185,83 +185,58 @@
             </div>
           </div>
 
-          <div class="projects-scroller-wrap">
-            <button class="scroll-arrow left" data-scroll="projects" data-dir="-1" aria-label="左へスクロール">
-              <i data-lucide="chevron-left"></i>
-            </button>
-            <button class="scroll-arrow right" data-scroll="projects" data-dir="1" aria-label="右へスクロール">
-              <i data-lucide="chevron-right"></i>
-            </button>
-
-            <div class="projects-scroller scrollbar-hide" id="projects-scroller">
-              <!-- Project 1 -->
-              <div class="project-card" data-project="0">
-                <div class="project-thumb">
-                  <img src="public/images/project/project01.png" alt="デジタル技術による設計プロセスの効率化とBBQ場の竣工" />
-                  <span class="project-arrow"><i data-lucide="arrow-up-right"></i></span>
-                </div>
-                <div class="project-body">
-                  <div class="project-meta">
-                    <h3 class="project-title">デジタル技術による設計プロセスの効率化とBBQ場の竣工</h3>
-                    <p class="project-subtitle">建築プロセスの高速化と実建築の現実化</p>
-                  </div>
-                  <p class="project-desc">
-                    個人設計事務所でのアルバイトにおける設計プロセスの変革。Shapr3Dによるモデルの構築、Morpholio Traceによるパース作成の導入提案により、より多くのアイデアを検討し、自身の案が反映されたBBQ場が実際に竣工。
-                  </p>
-                </div>
+          <div class="projects-grid" id="projects-list">
+            <!-- Project 1 -->
+            <article class="project-card" data-project="0">
+              <div class="project-card-media">
+                <img src="public/images/project/project01.png" alt="デジタル技術による設計プロセスの効率化とBBQ場の竣工" />
+                <span class="project-card-num">01</span>
               </div>
-
-              <!-- Project 2 -->
-              <div class="project-card" data-project="1">
-                <div class="project-thumb">
-                  <img src="public/images/project/project02.jpg" alt="建築初期段階における生成AIを活用したアイデア発想支援" />
-                  <span class="project-arrow"><i data-lucide="arrow-up-right"></i></span>
-                </div>
-                <div class="project-body">
-                  <div class="project-meta">
-                    <h3 class="project-title">建築初期段階における生成AIを活用したアイデア発想支援</h3>
-                    <p class="project-subtitle">人間とAIが共創する「着想支援の設計」</p>
-                  </div>
-                  <p class="project-desc">
-                    設計の「一番はじめのアイデア出し」においてAIが設計者の思考をどう助けるかを実証的に探究する研究。
-                  </p>
-                </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">デジタル技術による設計プロセスの効率化とBBQ場の竣工</h3>
+                <p class="project-card-subtitle">建築プロセスの高速化と実建築の現実化</p>
+                <span class="project-card-link">VIEW CASE STUDY <i data-lucide="arrow-up-right"></i></span>
               </div>
+            </article>
 
-              <!-- Project 3 -->
-              <div class="project-card" data-project="2">
-                <div class="project-thumb">
-                  <img src="public/images/project/project03.jpg" alt="GASとスプレッドシートを用いたシフト管理システムと業務改善" />
-                  <span class="project-arrow"><i data-lucide="arrow-up-right"></i></span>
-                </div>
-                <div class="project-body">
-                  <div class="project-meta">
-                    <h3 class="project-title">GASとスプレッドシートを用いたシフト管理システムと業務改善</h3>
-                    <p class="project-subtitle">個人飲食店向けデジタルシフト管理＆業務プロセスの変革</p>
-                  </div>
-                  <p class="project-desc">
-                    手書きシフト管理による転記ミスや利便性の課題を解決。Google Apps Scriptを活用したWebアプリケーションを構築し、発注票・マニュアルのデジタル化など店舗運営をトータルに改善。
-                  </p>
-                </div>
+            <!-- Project 2 -->
+            <article class="project-card" data-project="1">
+              <div class="project-card-media">
+                <img src="public/images/project/project02.jpg" alt="建築初期段階における生成AIを活用したアイデア発想支援" />
+                <span class="project-card-num">02</span>
               </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">建築初期段階における生成AIを活用したアイデア発想支援</h3>
+                <p class="project-card-subtitle">人間とAIが共創する「着想支援の設計」</p>
+                <span class="project-card-link">VIEW CASE STUDY <i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </article>
 
-              <!-- Project 4 -->
-              <div class="project-card" data-project="3">
-                <div class="project-thumb">
-                  <img src="public/images/project/project04.jpg" alt="感情記憶ネットワークによるアイデア発想支援アプリの提案" />
-                  <span class="project-arrow"><i data-lucide="arrow-up-right"></i></span>
-                </div>
-                <div class="project-body">
-                  <div class="project-meta">
-                    <h3 class="project-title">感情記憶ネットワークによるアイデア発想支援アプリの提案</h3>
-                    <p class="project-subtitle">ソフトバンク生成AIアイデアコンテスト 45,000件中第84位</p>
-                  </div>
-                  <p class="project-desc">
-                    日常の写真やメモから感情推論データを生成し、AIが個人の「記憶のネットワーク」を構築。発想時にあえて関連性の低い記憶同士を組み合わせる提案を行わせ、アイデアに新たな刺激を与えるアプリを提案。
-                  </p>
-                </div>
+            <!-- Project 3 -->
+            <article class="project-card" data-project="2">
+              <div class="project-card-media">
+                <img src="public/images/project/project03.jpg" alt="GASとスプレッドシートを用いたシフト管理システムと業務改善" />
+                <span class="project-card-num">03</span>
               </div>
-            </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">GASとスプレッドシートを用いたシフト管理システムと業務改善</h3>
+                <p class="project-card-subtitle">個人飲食店向けデジタルシフト管理＆業務プロセスの変革</p>
+                <span class="project-card-link">VIEW CASE STUDY <i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card" data-project="3">
+              <div class="project-card-media">
+                <img src="public/images/project/project04.jpg" alt="感情記憶ネットワークによるアイデア発想支援アプリの提案" />
+                <span class="project-card-num">04</span>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-card-title">感情記憶ネットワークによるアイデア発想支援アプリの提案</h3>
+                <p class="project-card-subtitle">ソフトバンク生成AIアイデアコンテスト 45,000件中第84位</p>
+                <span class="project-card-link">VIEW CASE STUDY <i data-lucide="arrow-up-right"></i></span>
+              </div>
+            </article>
           </div>
         </div>
 
@@ -311,160 +286,70 @@
         <div class="container">
           <div class="section-head">
             <span class="section-index">03</span>
-              <div>
-                <span class="section-eyebrow">TOOLS &amp; STACK</span>
-                <h2 class="section-title">使用ツール ＆ スキル</h2>
-              </div>
+            <div>
+              <span class="section-eyebrow">TOOLS &amp; STACK</span>
+              <h2 class="section-title">使用ツール ＆ スキル</h2>
+            </div>
+          </div>
+
+          <div class="skills-layout">
+            <div class="skills-tabs" id="skills-table">
+              <button class="skill-tab active" data-skill="0" data-image="public/images/skill/3d.png" data-alt="BIM / 3D CAD">
+                <span class="skill-tab-icon"><i data-lucide="layers"></i></span>
+                <div class="skill-tab-titles">
+                  <span class="skill-tab-part">PART 01</span>
+                  <h4 class="skill-tab-title">BIM / 3D CAD</h4>
+                </div>
+              </button>
+              <button class="skill-tab" data-skill="1" data-image="public/images/skill/rendering.jpeg" data-alt="Rendering / Visualization">
+                <span class="skill-tab-icon"><i data-lucide="image"></i></span>
+                <div class="skill-tab-titles">
+                  <span class="skill-tab-part">PART 02</span>
+                  <h4 class="skill-tab-title">Rendering / Visualization</h4>
+                </div>
+              </button>
+              <button class="skill-tab" data-skill="2" data-image="public/images/skill/design.jpeg" data-alt="Design / Illustration">
+                <span class="skill-tab-icon"><i data-lucide="palette"></i></span>
+                <div class="skill-tab-titles">
+                  <span class="skill-tab-part">PART 03</span>
+                  <h4 class="skill-tab-title">Design / Illustration</h4>
+                </div>
+              </button>
+              <button class="skill-tab" data-skill="3" data-image="public/images/skill/ai.jpg" data-alt="AI / Technology">
+                <span class="skill-tab-icon"><i data-lucide="cpu"></i></span>
+                <div class="skill-tab-titles">
+                  <span class="skill-tab-part">PART 04</span>
+                  <h4 class="skill-tab-title">AI / Technology</h4>
+                </div>
+              </button>
             </div>
 
-            <div class="skills-scroller-wrap">
-              <button class="scroll-arrow left" data-scroll="skills" data-dir="-1" aria-label="左へスクロール">
-                <i data-lucide="chevron-left"></i>
-              </button>
-              <button class="scroll-arrow right" data-scroll="skills" data-dir="1" aria-label="右へスクロール">
-                <i data-lucide="chevron-right"></i>
-              </button>
-
-              <div class="skills-scroller scrollbar-hide" id="skills-scroller">
-                <!-- Category 1 -->
-                <div class="skill-card">
-                  <div>
-                    <div class="skill-card-head">
-                      <div class="skill-card-head-inner">
-                        <div class="skill-icon-cat"><i data-lucide="layers"></i></div>
-                        <div>
-                          <div class="skill-part">PART 01</div>
-                          <h4 class="skill-cat-title">BIM / 3D CAD</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-content">
-                      <div class="skill-ref-img">
-                        <img src="public/images/skill/3d.png" alt="BIM / 3D CAD" />
-                        <div class="skill-ref-overlay"></div>
-                      </div>
-                      <div class="skill-list">
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/archicad.png" alt="Archicad" /></div>
-                          <span class="skill-item-name">Archicad</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/revit.png" alt="Revit" /></div>
-                          <span class="skill-item-name">Revit</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/autocad.png" alt="AutoCAD" /></div>
-                          <span class="skill-item-name">AutoCAD</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/shaper3d.png" alt="Shapr3D" /></div>
-                          <span class="skill-item-name">Shapr3D</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="skills-content">
+              <div class="skills-tools" id="skills-tools">
+                <div class="skill-tools-group active" data-skill="0">
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/archicad.png" alt="" /></span>Archicad</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/revit.png" alt="" /></span>Revit</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/autocad.png" alt="" /></span>AutoCAD</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/shaper3d.png" alt="" /></span>Shapr3D</span>
                 </div>
-
-                <!-- Category 2 -->
-                <div class="skill-card">
-                  <div>
-                    <div class="skill-card-head">
-                      <div class="skill-card-head-inner">
-                        <div class="skill-icon-cat"><i data-lucide="image"></i></div>
-                        <div>
-                          <div class="skill-part">PART 02</div>
-                          <h4 class="skill-cat-title">Rendering / Visualization</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-content">
-                      <div class="skill-ref-img">
-                        <img src="public/images/skill/rendering.jpeg" alt="Rendering / Visualization" />
-                        <div class="skill-ref-overlay"></div>
-                      </div>
-                      <div class="skill-list">
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/twinmotion.png" alt="Twinmotion" /></div>
-                          <span class="skill-item-name">Twinmotion</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/morpholio.jpeg" alt="Morpholio Trace" /></div>
-                          <span class="skill-item-name">Morpholio Trace</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="skill-tools-group" data-skill="1">
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/twinmotion.png" alt="" /></span>Twinmotion</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/morpholio.jpeg" alt="" /></span>Morpholio Trace</span>
                 </div>
-
-                <!-- Category 3 -->
-                <div class="skill-card">
-                  <div>
-                    <div class="skill-card-head">
-                      <div class="skill-card-head-inner">
-                        <div class="skill-icon-cat"><i data-lucide="palette"></i></div>
-                        <div>
-                          <div class="skill-part">PART 03</div>
-                          <h4 class="skill-cat-title">Design / Illustration</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-content">
-                      <div class="skill-ref-img">
-                        <img src="public/images/skill/design.jpeg" alt="Design / Illustration" />
-                        <div class="skill-ref-overlay"></div>
-                      </div>
-                      <div class="skill-list">
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/illustrator.png" alt="Illustrator" /></div>
-                          <span class="skill-item-name">Illustrator</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/affinity.png" alt="Affinity Suite" /></div>
-                          <span class="skill-item-name">Affinity Suite</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/procreate.jpeg" alt="Procreate &amp; Concepts" /></div>
-                          <span class="skill-item-name">Procreate &amp; Concepts</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="skill-tools-group" data-skill="2">
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/illustrator.png" alt="" /></span>Illustrator</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/affinity.png" alt="" /></span>Affinity Suite</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/procreate.jpeg" alt="" /></span>Procreate &amp; Concepts</span>
                 </div>
-
-                <!-- Category 4 -->
-                <div class="skill-card">
-                  <div>
-                    <div class="skill-card-head">
-                      <div class="skill-card-head-inner">
-                        <div class="skill-icon-cat"><i data-lucide="cpu"></i></div>
-                        <div>
-                          <div class="skill-part">PART 04</div>
-                          <h4 class="skill-cat-title">AI / Technology</h4>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="skill-content">
-                      <div class="skill-ref-img">
-                        <img src="public/images/skill/ai.jpg" alt="AI / Technology" />
-                        <div class="skill-ref-overlay"></div>
-                      </div>
-                      <div class="skill-list">
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><img src="public/images/skill/tool_icon/gemini.png" alt="Gemini / Claude API" /></div>
-                          <span class="skill-item-name">Gemini / Claude API</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><i data-lucide="code-2"></i></div>
-                          <span class="skill-item-name">JavaScript (GAS)</span>
-                        </div>
-                        <div class="skill-item">
-                          <div class="skill-item-icon"><i data-lucide="terminal"></i></div>
-                          <span class="skill-item-name">Python</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="skill-tools-group" data-skill="3">
+                  <span class="skill-chip"><span class="skill-chip-icon"><img src="public/images/skill/tool_icon/gemini.png" alt="" /></span>Gemini / Claude API</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><i data-lucide="code-2"></i></span>JavaScript (GAS)</span>
+                  <span class="skill-chip"><span class="skill-chip-icon"><i data-lucide="terminal"></i></span>Python</span>
                 </div>
+              </div>
+
+              <div class="skills-viewer">
+                <img id="skills-viewer-image" src="public/images/skill/3d.png" alt="BIM / 3D CAD" />
               </div>
             </div>
           </div>
@@ -482,115 +367,54 @@
             </div>
           </div>
 
-          <div class="interests-grid">
-            <!-- Gallery list -->
-            <div>
-              <h3 class="interest-list-title">INDEX — SNAPSHOT GALLERY</h3>
-              <div class="interest-list" id="interest-list">
-                <button class="interest-btn active" data-hobby="camera">
-                  <span class="interest-btn-mobile"><i data-lucide="camera"></i></span>
-                  <span class="interest-btn-desktop">
-                    <span class="interest-thumb"><img src="public/images/hobby/camera.jpeg" alt="Camera / 写真" /></span>
-                    <span class="interest-text">
-                      <span class="interest-text-top">
-                        <span class="interest-icon-badge"><i data-lucide="camera"></i></span>
-                        <span class="interest-id">CAMERA</span>
-                      </span>
-                      <span class="interest-title" style="display:block;">Camera / 写真</span>
-                      <span class="interest-desc" style="display:block;">日常のきらめきや街角のスナップ撮影</span>
-                    </span>
-                    <span class="interest-indicator"></span>
-                  </span>
-                </button>
+          <div class="interests-accordion" id="interest-list">
+            <button class="hobby-panel active" data-hobby="camera">
+              <img src="public/images/hobby/camera.jpeg" alt="Camera / 写真" />
+              <span class="hobby-panel-overlay"></span>
+              <span class="hobby-panel-num">01</span>
+              <span class="hobby-panel-collapsed">Camera / 写真</span>
+              <span class="hobby-panel-caption">
+                <span class="hobby-panel-tag">01 / CAMERA</span>
+                <span class="hobby-panel-title">Camera / 写真</span>
+                <span class="hobby-panel-desc">旅先や街歩きをしながら、光が美しく差し込む瞬間や、人々のふとした表情をカメラで切り取るのが何よりの楽しみ。季節の移ろいや日常に宿る一瞬のドラマを探求しています。</span>
+              </span>
+            </button>
 
-                <button class="interest-btn" data-hobby="aikido">
-                  <span class="interest-btn-mobile"><i data-lucide="award"></i></span>
-                  <span class="interest-btn-desktop">
-                    <span class="interest-thumb"><img src="public/images/hobby/aikido.jpeg" alt="合気道" /></span>
-                    <span class="interest-text">
-                      <span class="interest-text-top">
-                        <span class="interest-icon-badge"><i data-lucide="award"></i></span>
-                        <span class="interest-id">AIKIDO</span>
-                      </span>
-                      <span class="interest-title" style="display:block;">合気道 / Aikido</span>
-                      <span class="interest-desc" style="display:block;">心身を柔軟に鍛える円の動きと調和</span>
-                    </span>
-                    <span class="interest-indicator"></span>
-                  </span>
-                </button>
+            <button class="hobby-panel" data-hobby="aikido">
+              <img src="public/images/hobby/aikido.jpeg" alt="合気道 / Aikido" />
+              <span class="hobby-panel-overlay"></span>
+              <span class="hobby-panel-num">02</span>
+              <span class="hobby-panel-collapsed">合気道 / Aikido</span>
+              <span class="hobby-panel-caption">
+                <span class="hobby-panel-tag">02 / AIKIDO</span>
+                <span class="hobby-panel-title">合気道 / Aikido</span>
+                <span class="hobby-panel-desc">精進を重ねて二段を取得。腕力ではなく中心軸を安定させ、流れる円運動で相手の力と同調していなす姿勢を大切に。礼儀作法と静かな集中力の鍛錬として向き合っています。</span>
+              </span>
+            </button>
 
-                <button class="interest-btn" data-hobby="mahjong">
-                  <span class="interest-btn-mobile"><i data-lucide="compass"></i></span>
-                  <span class="interest-btn-desktop">
-                    <span class="interest-thumb"><img src="public/images/hobby/mahjong.jpeg" alt="麻雀" /></span>
-                    <span class="interest-text">
-                      <span class="interest-text-top">
-                        <span class="interest-icon-badge"><i data-lucide="compass"></i></span>
-                        <span class="interest-id">MAHJONG</span>
-                      </span>
-                      <span class="interest-title" style="display:block;">麻雀 / Mahjong</span>
-                      <span class="interest-desc" style="display:block;">一瞬の決断力を競う心理と確率のゲーム</span>
-                    </span>
-                    <span class="interest-indicator"></span>
-                  </span>
-                </button>
+            <button class="hobby-panel" data-hobby="mahjong">
+              <img src="public/images/hobby/mahjong.jpeg" alt="麻雀 / Mahjong" />
+              <span class="hobby-panel-overlay"></span>
+              <span class="hobby-panel-num">03</span>
+              <span class="hobby-panel-collapsed">麻雀 / Mahjong</span>
+              <span class="hobby-panel-caption">
+                <span class="hobby-panel-tag">03 / MAHJONG</span>
+                <span class="hobby-panel-title">麻雀 / Mahjong</span>
+                <span class="hobby-panel-desc">限られた情報から確率的な選択肢を組み立て、相手との駆け引きや心理戦を楽しむ。冷静な状況判断力を養い、攻めと守りの絶妙なタイミングを見極める戦略性に惹かれています。</span>
+              </span>
+            </button>
 
-                <button class="interest-btn" data-hobby="cooking">
-                  <span class="interest-btn-mobile"><i data-lucide="chef-hat"></i></span>
-                  <span class="interest-btn-desktop">
-                    <span class="interest-thumb"><img src="public/images/hobby/food.jpeg" alt="料理 ＆ ラーメン巡り" /></span>
-                    <span class="interest-text">
-                      <span class="interest-text-top">
-                        <span class="interest-icon-badge"><i data-lucide="chef-hat"></i></span>
-                        <span class="interest-id">COOKING</span>
-                      </span>
-                      <span class="interest-title" style="display:block;">料理 ＆ ラーメン巡り / Cooking</span>
-                      <span class="interest-desc" style="display:block;">丁寧な仕込みが生み出す極上の一品</span>
-                    </span>
-                    <span class="interest-indicator"></span>
-                  </span>
-                </button>
-              </div>
-            </div>
-
-            <!-- Viewer -->
-            <div class="viewer">
-              <div class="viewer-inner" id="viewer-inner">
-                <div class="viewer-head">
-                  <h4 class="viewer-title" id="viewer-title">Camera / 写真</h4>
-                </div>
-                <div class="viewer-frame">
-                  <img id="viewer-image" src="public/images/hobby/camera.jpeg" alt="" />
-                  <div class="viewer-grid-overlay">
-                    <div></div><div></div><div></div>
-                    <div></div><div></div><div></div>
-                    <div></div><div></div><div></div>
-                  </div>
-                  <div class="viewer-corner tl"></div>
-                  <div class="viewer-corner tr"></div>
-                  <div class="viewer-corner bl"></div>
-                  <div class="viewer-corner br"></div>
-                  <div class="viewer-crosshair">
-                    <div class="viewer-crosshair-inner">
-                      <div class="h"></div>
-                      <div class="v"></div>
-                      <div class="c"></div>
-                    </div>
-                  </div>
-                  <div class="viewer-watermark">50mm Lens • Standard Focus</div>
-                </div>
-                <div class="viewer-story">
-                  <div class="viewer-story-tag">
-                    <span class="dot"></span>
-                    <span class="label">SNAPSHOT REVELATION / バックストーリー</span>
-                  </div>
-                  <p class="viewer-story-title" id="viewer-description">日常のきらめきや街角のスナップ撮影</p>
-                  <p class="viewer-story-detail" id="viewer-detail">
-                    旅先や街歩きをしながら、光が美しく差し込む瞬間や、人々のふとした表情をカメラで切り取るのが何よりの楽しみです。愛機を片手に、季節の美しい移ろいや、何気ない日常の中に宿る一瞬のドラマを探求しています。
-                  </p>
-                </div>
-              </div>
-            </div>
+            <button class="hobby-panel" data-hobby="cooking">
+              <img src="public/images/hobby/food.jpeg" alt="料理 ＆ ラーメン巡り / Cooking" />
+              <span class="hobby-panel-overlay"></span>
+              <span class="hobby-panel-num">04</span>
+              <span class="hobby-panel-collapsed">料理 ＆ ラーメン</span>
+              <span class="hobby-panel-caption">
+                <span class="hobby-panel-tag">04 / COOKING</span>
+                <span class="hobby-panel-title">料理 ＆ ラーメン巡り</span>
+                <span class="hobby-panel-desc">素材の組み合わせや加熱時間を見極め、こだわりを詰め込んだ一品を作るのが好きなリフレッシュ。週末は全国のラーメン店を巡り、個性豊かなスープの調和や調理技術に感動をもらっています。</span>
+              </span>
+            </button>
           </div>
         </div>
       </section>
