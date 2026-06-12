@@ -793,25 +793,9 @@ button {
   display: flex;
   flex-direction: column;
 }
-@media (min-width: 1024px) {
-  .skills-content {
-    flex-direction: row;
-    min-height: 380px;
-  }
-}
 .skills-tools {
   padding: 1.25rem 1.35rem;
   transition: opacity 0.2s ease;
-}
-@media (min-width: 1024px) {
-  .skills-tools {
-    width: 280px;
-    flex-shrink: 0;
-    border-right: 1px solid var(--hairline);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 .skills-tools.fade {
   opacity: 0;
@@ -862,12 +846,6 @@ button {
   overflow: hidden;
   background: var(--ink);
   aspect-ratio: 16 / 10;
-}
-@media (min-width: 1024px) {
-  .skills-viewer {
-    aspect-ratio: auto;
-    flex: 1;
-  }
 }
 .skills-viewer img {
   position: absolute;
