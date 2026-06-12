@@ -795,6 +795,7 @@ button {
 @media (min-width: 1024px) {
   .skills-content {
     flex-direction: row;
+    min-height: 380px;
   }
 }
 .skills-tools {
@@ -806,6 +807,9 @@ button {
     width: 280px;
     flex-shrink: 0;
     border-right: 1px solid var(--hairline);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 .skills-tools.fade {
