@@ -440,13 +440,14 @@ button {
   font-family: var(--font-display);
   font-weight: 300;
   font-size: 2.5rem;
-  line-height: 0.85;
+  line-height: 1.4;
   color: var(--gray-light);
   flex-shrink: 0;
 }
 @media (min-width: 768px) {
   .section-index {
     font-size: 3.25rem;
+    line-height: 1.2;
   }
 }
 .section-eyebrow {
