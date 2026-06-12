@@ -917,7 +917,7 @@ button {
   flex-direction: column;
   border: 1px solid var(--hairline-strong);
   background: var(--white);
-  border-radius: var(--radius);
+  border-radius: 0 0 var(--radius) var(--radius);
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
@@ -952,7 +952,7 @@ button {
   color: #fff;
   background: var(--ink);
   padding: 0.3rem 0.6rem;
-  border-radius: var(--radius) 0 var(--radius-sm) 0;
+  border-radius: 0 0 var(--radius-sm) 0;
 }
 .project-card-body {
   display: flex;
@@ -1210,7 +1210,6 @@ button {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--hairline-strong);
-  border-radius: var(--radius);
   background: var(--ink);
   cursor: pointer;
   text-align: left;
