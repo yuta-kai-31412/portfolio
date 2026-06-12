@@ -1460,15 +1460,6 @@ button {
     justify-content: space-between;
   }
 }
-.footer-org {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.footer-org svg {
-  width: 13px;
-  height: 13px;
-}
 .footer-bottom p {
   margin: 0;
 }
