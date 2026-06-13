@@ -133,7 +133,7 @@ export const INTERESTS = [
     id: "camera",
     icon: "Camera",
     title: "写真 / Camera",
-    detail: "旅先や街歩きをしながら、人々のふとした表情をカメラで切り取るのが何よりの楽しみです。",
+    detail: "旅先や街歩きをしながら、人々のふとした表情をカメラで切り取るのが何よりの楽しみです。メイン機はSony nex6 を使っています。",
   },
   {
     id: "aikido",
